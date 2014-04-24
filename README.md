@@ -1,12 +1,20 @@
 Demand
 ======
 
-Demand.js is a lightweight XMLHttpRequest wrapper. REST is supported.
+Don't make requests - make Demands!
+-----------------------------------
+
+Demand.js is a lightweight XMLHttpRequest wrapper with which you can demand resources from servers.
 
 ```javascript
 // Use it this way:
 
-var demand = new Demand('/url', {success: function(xhr) {}, failure: function(xhr) {}, complete: function(xhr) {}});
+var demand = new Demand('/url', {
+  success: function(xhr) {},
+  failure: function(xhr) {},
+  complete: function(xhr) {}
+});
+
 demand.get();
 
 // or like this:
@@ -22,8 +30,8 @@ Methods
 -------
 
 `get(void)`  
-`post(void)`  
-`put(void)`  
+`post(string | object | FormData)`  
+`put(string | object | FormData)`  
 `delete(void)`  
 `head(void)`  
 `options(void)`  
